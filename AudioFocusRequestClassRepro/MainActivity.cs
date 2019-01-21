@@ -1,5 +1,6 @@
 ﻿using System;
 using Android.App;
+using Android.Media;
 using Android.OS;
 using Android.Runtime;
 using Android.Support.Design.Widget;
@@ -15,6 +16,8 @@ namespace AudioFocusRequestClassRepro
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            var builder = new AudioFocusRequestClass.Builder(AudioFocus.Gain);
+
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_main);
 
